@@ -48,7 +48,7 @@ export default async function RootLayout({
   const flagsmithState = await flagsmith
     .init({
       // fetches flags on the server
-      environmentID: "kXRftTUZHrYEf38JqMsDka", // substitute your env ID
+      environmentID: String(process.env.NEXT_PUBLIC_FLAGSMITH_ENV), // substitute your env ID
     })
     .then(() => {
       return flagsmith.getState();
