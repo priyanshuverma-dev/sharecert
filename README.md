@@ -24,7 +24,7 @@ Sharecert is a platform where users can securely upload, showcase, and verify th
 
 Before you begin, ensure you have the following prerequisites:
 
-- [Node.js](https://nodejs.org/) (version X.X.X)
+- [Node.js](https://nodejs.org/) (version 18.X.X)
 - [IPFS](https://ipfs.io/) (optional: if you want to run your own IPFS node)
 
 ### Installation
@@ -44,7 +44,7 @@ Before you begin, ensure you have the following prerequisites:
 3. Install dependencies:
 
    ```bash
-   npm install
+   pnpm install
    ```
 
 ## Usage
@@ -52,12 +52,36 @@ Before you begin, ensure you have the following prerequisites:
 1. Start the Sharecert application:
 
    ```bash
-   npm start
+   pnpm dev
    ```
 
-2. Open your web browser and go to [http://localhost:3000](http://localhost:3000).
+2. Create a `.env` file in the root directory of the project with the following environment variables:
 
-3. Follow the on-screen instructions to upload, showcase, and verify certificates.
+   ```env
+   DATABASE_URL="mongodb://localhost:27017/sharecert"
+
+   AUTH_GOOGLE_SECRET="google-secret-key"
+   AUTH_GOOGLE_ID="google-id"
+
+   AUTH_GITHUB_SECRET="github-secret-key"
+   AUTH_GITHUB_ID="github-id"
+
+   AUTH_URL="http://localhost:3000/api/auth"
+   AUTH_SECRET="secret-key"
+
+   NEXT_PUBLIC_URL="http://localhost:3000"
+   NEXT_PUBLIC_IPFS_KEY="ipfs-key"
+   ```
+
+3. Generate prisma client:
+
+   ```bash
+   pnpm dlx prisma generate
+   ```
+
+4. Open your web browser and go to [http://localhost:3000](http://localhost:3000).
+
+5. Follow the on-screen instructions to upload, showcase, and verify certificates.
 
 ## Contributing
 

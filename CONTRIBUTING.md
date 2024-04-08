@@ -33,6 +33,29 @@ Thank you for considering contributing to Sharecert! Your contributions help mak
 
 6. Open a pull request from your forked repository to the main Sharecert repository.
 
+## Env.
+
+```env
+
+DATABASE_URL="mongodb://localhost:27017/sharecert"
+
+AUTH_GOOGLE_SECRET="google-secret-key"
+AUTH_GOOGLE_ID="google-id"
+
+AUTH_GITHUB_SECRET="github-secret-key"
+AUTH_GITHUB_ID="github-id"
+
+AUTH_URL="http://localhost:3000/api/auth"
+AUTH_SECRET="secret-key"
+
+NEXT_PUBLIC_URL="http://localhost:3000"
+NEXT_PUBLIC_IPFS_KEY="ipfs-key"
+```
+
+## IPFS Key
+
+You will need to create an IPFS key to use the IPFS service. You can create an IPFS key by going to the website [https://nft.storage/](https://nft.storage/).
+
 ## Code Style
 
 Please follow the coding style guidelines to maintain consistency across the project. Refer to the project's style guide or documentation for specific details.
