@@ -62,10 +62,10 @@ const FeedSection = () => {
         <div className="flex items-center justify-center flex-col">
           <div className="flex items-center justify-start flex-col text-start">
             <p className="leading-7 ">
-              Let's mint your certs to see in feeds.
+              Let&apos;s mint your certs to see in feeds.
               <Separator />
               <p className="leading-7 text-start">
-                Step 1: Click on the "Create" button.
+                Step 1: Click on the &quot;Create&quot; button.
               </p>
               <p className="leading-7 text-start">
                 Step 2: Upload your certificate.
